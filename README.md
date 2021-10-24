@@ -6,8 +6,7 @@ Gerade wenn Sie in einer größeren Gruppe reisen ist es vorteilhaft Ihren
 Urlaub zu planen. Aber auch wenn sie allein verreisen kann unser kleiner
 helfer zu einem entspannteren Urlaub führen.
 
-Der "TripPlaner" bietet eine reihe von funktionalitäten um die Kommunika-
-tion und Planung innerhalb der Gruppe zu vereinfachen. 
+Der "TripPlaner" bietet eine reihe von funktionalitäten um die Kommunikation und Planung innerhalb der Gruppe zu vereinfachen. 
 
 
 ## Funktionalitäten des "TripPlaners":
@@ -36,6 +35,6 @@ Optional:
 vorbehalten. Bei dieser Web-Api handelt es sich um ein Hochschulprojekt
 im Rahmen des Moduls "Webtechnologien".
 
-*readme v1.0 - last update: 24.10.2021 / 16:59 middle european time* 
+*readme v1.1 - last update: 24.10.2021 / 17:10 middle european time* 
 
 
