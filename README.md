@@ -10,20 +10,21 @@ Der "TripPlaner" bietet eine reihe von funktionalitäten um die Kommunikation un
 
 
 ## Funktionalitäten des "TripPlaners":
+Must Have:
 - Anmeldung als Benutzer
-- Verwalten von Urlaubsprofilen (falls mehrere Trips geplannt sind)
-- Zugriffs-/änderungsrechte für Urlaubsprofile verwalten  
 - Erstellmöglichkeit von Abstimmungspools (Notifications für Ergebnis)
-- Abfrage von aktuellen Preisen für Flugtickets
 - Erstellen von Check-/ToDo Listen (ggf. Notifications senden)
-- Notifications über anstehende ToDo Ereignisse  
-- Kostenaufstellung für den geplannten Trip(Kostenaufteilung bei Gruppen)  
-- Kalendarische Darstellung für den Zeitraum des Trips
-- Erstellung von "PlacesToBe"
-  (Was möchte man in Urlaub sehen/Wo möchte man hin?)
-- Drag&Drop der "PlacesToBe" in die jweiligen Tage im Kalendar
+- Countdown zum nächten anstehenden ToDo Ereignis
+- Kostenaufstellung für den geplannten Trip(Kostenaufteilung bei Gruppen)
 
 Optional:
+- Verwalten von Urlaubsprofilen (falls mehrere Trips geplannt sind)
+- Zugriffs-/änderungsrechte für Urlaubsprofile verwalten
+- Abfrage von aktuellen Preisen für Flugtickets
+- Kalendarische Darstellung für den Zeitraum des Trips
+- Erstellung von "PlacesToBe" (+Adressbuch)
+  (Was möchte man im Urlaub sehen/Wo möchte man hin?)
+- Drag&Drop der "PlacesToBe" in die jweiligen Tage im Kalendar
 - Chatfunktion unter den Benutzern
 - Route zu "PlacesToBe" anzeigen und offline Navigation verwenden
 - Mobile Version
@@ -35,6 +36,6 @@ Optional:
 vorbehalten. Bei dieser Web-Api handelt es sich um ein Hochschulprojekt
 im Rahmen des Moduls "Webtechnologien".
 
-*readme v1.1 - last update: 24.10.2021 / 17:10 middle european time* 
+*readme v1.2 - last update: 27.10.2021 / 15:44 middle european time* 
 
 
