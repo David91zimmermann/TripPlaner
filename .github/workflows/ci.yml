@@ -3,13 +3,14 @@ name: CI
 on: [ push ]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 16
-      uses: actions/setup-java@v2
-      with:
-        distribution: "adopt"
-        java-version: 16
-    - name: clean build
-      run: ./gradlew clean build -x jar --info --stacktrace
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 16
+        uses: actions/setup-java@v2
+        with:
+          distribution: "adopt"
+          java-version: 11
+      - name: clean build
+        run: ./gradlew clean build -x jar --info --stacktrace
