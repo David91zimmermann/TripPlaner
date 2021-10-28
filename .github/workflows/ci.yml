@@ -12,4 +12,4 @@ jobs:
         distribution: "adopt"
         java-version: 11
     - name: clean build
-      run: ./gradlew clean build --info --stacktrace
+      run: ./gradlew clean build -x jar --info --stacktrace
