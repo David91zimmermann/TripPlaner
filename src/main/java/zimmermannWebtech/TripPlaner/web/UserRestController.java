@@ -10,7 +10,6 @@ import zimmermannWebtech.TripPlaner.web.entity.UserManipulationRequest;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
