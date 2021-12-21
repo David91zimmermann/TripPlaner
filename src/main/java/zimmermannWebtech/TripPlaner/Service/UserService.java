@@ -27,7 +27,7 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
-    public User findByID(Long id) {
+    public User findById(Long id) {
         var userEntity = userRepo.findById(id);
         return userEntity.map(userTransformer::transformEntity).orElse(null);
     }
