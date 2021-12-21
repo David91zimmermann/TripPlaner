@@ -15,12 +15,12 @@ public class UserRestController {
 
     public UserRestController(){
         this.user = new ArrayList();
-        user.add(new User(1,"David","Zimmermann","male","DavidZ","test"));
-        user.add(new User(2,"Nina","Zimmermann","female","NinaZ","test"));
-        user.add(new User(3,"Dariusz","Haratyk","male", "DarekH","test"));
+        user.add(new User("DavidZ","test", "David","Zimmermann"));
+        user.add(new User("NinaZ","test", "Nina","Zimmermann"));
+        user.add(new User("DarekH","test", "Dariusz","Haratyk"));
     }
 
-    @GetMapping(path = "/entity/v1/user")
+    @GetMapping(path = "/entity/v1/users")
     public ResponseEntity<List<User>> showUser(){
         return ResponseEntity.ok(user);
     }

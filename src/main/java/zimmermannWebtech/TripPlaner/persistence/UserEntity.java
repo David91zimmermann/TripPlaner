@@ -1,24 +1,38 @@
-package zimmermannWebtech.TripPlaner.web.entity;
+package zimmermannWebtech.TripPlaner.persistence;
 
-public class User {
+import javax.persistence.*;
 
-    private long id;
+@Entity(name = "users")
+public class UserEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "username", nullable = false)
     private String username;
+
+    @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "first_name", nullable = false)
     private String firstName;
+
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    public User(long id, String username, String password, String firstName, String lastName) {
-        this.id = id;
+    public UserEntity(String username, String password, String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
     }
+    protected UserEntity() {}
 
-    public long getId() { return id; }
+    public Long getId() { return id; }
 
-    public void setId(long id) { this.id = id; }
+    public void setId(Long id) { this.id = id; }
 
     public String getFirstName() {
         return firstName;
