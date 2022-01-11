@@ -19,10 +19,10 @@ public class TripEntity {
     private String reiseort;
 
     @Column(name = "reisestart", nullable = false)
-    private LocalDateTime reisestart;
+    private String reisestart;
 
     @Column(name = "reiseende", nullable = false)
-    private LocalDateTime reiseende;
+    private String reiseende;
 
     @Column(name = "ersteller")
     private String ersteller;
@@ -37,7 +37,7 @@ public class TripEntity {
 
     protected TripEntity() {}
 
-    public TripEntity(String urlaubsname, String reiseort, LocalDateTime reisestart, LocalDateTime reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
+    public TripEntity(String urlaubsname, String reiseort, String reisestart, String reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
         this.urlaubsname = urlaubsname;
         this.reiseort = reiseort;
         this.reisestart = reisestart;
@@ -71,19 +71,19 @@ public class TripEntity {
         this.reiseort = reiseort;
     }
 
-    public LocalDateTime getReisestart() {
+    public String getReisestart() {
         return reisestart;
     }
 
-    public void setReisestart(LocalDateTime reisestart) {
+    public void setReisestart(String reisestart) {
         this.reisestart = reisestart;
     }
 
-    public LocalDateTime getReiseende() {
+    public String getReiseende() {
         return reiseende;
     }
 
-    public void setReiseende(LocalDateTime reiseende) {
+    public void setReiseende(String reiseende) {
         this.reiseende = reiseende;
     }
 

@@ -13,10 +13,10 @@ public class TripManipulationRequest {
     private String reiseort;
 
     @NotBlank(message = "Bitte geben Sie das Startdatum Ihrer Reise an.")
-    private LocalDateTime reisestart;
+    private String reisestart;
 
     @NotBlank(message = "Bitte geben Sie das Rückkehrdatum Ihrer Reise an.")
-    private LocalDateTime reiseende;
+    private String reiseende;
 
     private String ersteller;
     private List<String> begleiter;
@@ -50,17 +50,17 @@ public class TripManipulationRequest {
 
     public TripManipulationRequest() {}
 
-    public LocalDateTime getReisestart() {
+    public String getReisestart() {
         return reisestart;
     }
-    public void setReisestart(LocalDateTime reisestart) {
+    public void setReisestart(String reisestart) {
         this.reisestart = reisestart;
     }
 
-    public LocalDateTime getReiseende() {
+    public String getReiseende() {
         return reiseende;
     }
-    public void setReiseende(LocalDateTime reiseende) {
+    public void setReiseende(String reiseende) {
         this.reiseende = reiseende;
     }
 

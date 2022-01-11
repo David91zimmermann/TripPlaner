@@ -1,7 +1,7 @@
 package zimmermannWebtech.TripPlaner.web.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Trip {
@@ -9,13 +9,13 @@ public class Trip {
     private long tid;
     private String urlaubsname;
     private String reiseort;
-    private LocalDateTime reisestart;
-    private LocalDateTime reiseende;
+    private String reisestart;
+    private String reiseende;
     private String ersteller;
     private List<String> begleiter;
     private List<String> anfragende;
 
-    public Trip(long tid, String urlaubsname, String reiseort, LocalDateTime reisestart, LocalDateTime reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
+    public Trip(long tid, String urlaubsname, String reiseort, String reisestart, String reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
         this.tid = tid;
         this.urlaubsname = urlaubsname;
         this.reiseort = reiseort;
@@ -50,19 +50,19 @@ public class Trip {
         this.reiseort = reiseort;
     }
 
-    public LocalDateTime getReisestart() {
+    public String getReisestart() {
         return reisestart;
     }
 
-    public void setReisestart(LocalDateTime reisestart) {
+    public void setReisestart(String reisestart) {
         this.reisestart = reisestart;
     }
 
-    public LocalDateTime getReiseende() {
+    public String getReiseende() {
         return reiseende;
     }
 
-    public void setReiseende(LocalDateTime reiseende) {
+    public void setReiseende(String reiseende) {
         this.reiseende = reiseende;
     }
 
