@@ -18,11 +18,11 @@ public class TripEntity {
     @Column(name = "reiseort", nullable = false)
     private String reiseort;
 
-    @Column(name = "reisestart", nullable = false)
-    private String reisestart;
+    @Column(name = "tripbegin", nullable = false)
+    private String tripbegin;
 
-    @Column(name = "reiseende", nullable = false)
-    private String reiseende;
+    @Column(name = "tripend", nullable = false)
+    private String tripend;
 
     @Column(name = "ersteller")
     private String ersteller;
@@ -37,11 +37,11 @@ public class TripEntity {
 
     protected TripEntity() {}
 
-    public TripEntity(String urlaubsname, String reiseort, String reisestart, String reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
+    public TripEntity(String urlaubsname, String reiseort, String tripbegin, String tripend, String ersteller, List<String> begleiter, List<String> anfragende) {
         this.urlaubsname = urlaubsname;
         this.reiseort = reiseort;
-        this.reisestart = reisestart;
-        this.reiseende = reiseende;
+        this.tripbegin = tripbegin;
+        this.tripend = tripend;
         this.ersteller = ersteller;
         this.begleiter = begleiter;
         this.anfragende = anfragende;
@@ -71,20 +71,20 @@ public class TripEntity {
         this.reiseort = reiseort;
     }
 
-    public String getReisestart() {
-        return reisestart;
+    public String getTripbegin() {
+        return tripbegin;
     }
 
-    public void setReisestart(String reisestart) {
-        this.reisestart = reisestart;
+    public void setTripbegin(String tripbegin) {
+        this.tripbegin = tripbegin;
     }
 
-    public String getReiseende() {
-        return reiseende;
+    public String getTripend() {
+        return tripend;
     }
 
-    public void setReiseende(String reiseende) {
-        this.reiseende = reiseende;
+    public void setTripend(String tripend) {
+        this.tripend = tripend;
     }
 
     public String getErsteller() {

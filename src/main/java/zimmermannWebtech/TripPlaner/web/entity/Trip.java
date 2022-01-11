@@ -7,18 +7,18 @@ public class Trip {
     private long id;
     private String urlaubsname;
     private String reiseort;
-    private String reisestart;
-    private String reiseende;
+    private String tripbegin;
+    private String tripend;
     private String ersteller;
     private List<String> begleiter;
     private List<String> anfragende;
 
-    public Trip(long id, String urlaubsname, String reiseort, String reisestart, String reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
+    public Trip(long id, String urlaubsname, String reiseort, String tripbegin, String tripend, String ersteller, List<String> begleiter, List<String> anfragende) {
         this.id = id;
         this.urlaubsname = urlaubsname;
         this.reiseort = reiseort;
-        this.reisestart = reisestart;
-        this.reiseende = reiseende;
+        this.tripbegin = tripbegin;
+        this.tripend = tripend;
         this.ersteller = ersteller;
         this.begleiter = begleiter;
         this.anfragende = anfragende;
@@ -48,20 +48,20 @@ public class Trip {
         this.reiseort = reiseort;
     }
 
-    public String getReisestart() {
-        return reisestart;
+    public String getTripbegin() {
+        return tripbegin;
     }
 
-    public void setReisestart(String reisestart) {
-        this.reisestart = reisestart;
+    public void setTripbegin(String tripbegin) {
+        this.tripbegin = tripbegin;
     }
 
-    public String getReiseende() {
-        return reiseende;
+    public String getTripend() {
+        return tripend;
     }
 
-    public void setReiseende(String reiseende) {
-        this.reiseende = reiseende;
+    public void setTripend(String tripend) {
+        this.tripend = tripend;
     }
 
     public String getErsteller() {

@@ -33,7 +33,7 @@ public class TripService {
     }
 
     public Trip create(TripManipulationRequest request) {
-        var tripEntity = new TripEntity(request.getUrlaubsname(), request.getReiseort(), request.getReisestart(), request.getReiseende(), request.getErsteller(), request.getBegleiter(), request.getAnfragende());
+        var tripEntity = new TripEntity(request.getUrlaubsname(), request.getReiseort(), request.getTripbegin(), request.getTripend(), request.getErsteller(), request.getBegleiter(), request.getAnfragende());
         tripEntity = tripRepo.save(tripEntity);
         return tripTransformer.transformEntity(tripEntity);
     }
@@ -47,8 +47,8 @@ public class TripService {
         var tripEntity = tripEntityOptional.get();
         tripEntity.setUrlaubsname(request.getUrlaubsname());
         tripEntity.setReiseort(request.getReiseort());
-        tripEntity.setReisestart(request.getReisestart());
-        tripEntity.setReiseende(request.getReiseende());
+        tripEntity.setTripbegin(request.getTripbegin());
+        tripEntity.setTripend(request.getTripend());
         tripEntity = tripRepo.save(tripEntity);
 
         return tripTransformer.transformEntity(tripEntity);
