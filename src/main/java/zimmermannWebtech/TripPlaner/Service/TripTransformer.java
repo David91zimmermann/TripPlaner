@@ -8,7 +8,7 @@ import zimmermannWebtech.TripPlaner.web.entity.Trip;
 public class TripTransformer {
     public Trip transformEntity(TripEntity tripEntity) {
         return new Trip(
-                tripEntity.getTid(),
+                tripEntity.getId(),
                 tripEntity.getUrlaubsname(),
                 tripEntity.getReiseort(),
                 tripEntity.getReisestart(),

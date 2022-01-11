@@ -27,31 +27,31 @@ public class TripRestController {
         return ResponseEntity.ok(tripService.findAll());
     }
 
-    @GetMapping(path = "/api/v1/trips/{tid}")
-    public ResponseEntity<Trip> fetchTripsById(@PathVariable Long tid) {
-        var trip = tripService.findById(tid);
+    @GetMapping(path = "/api/v1/trips/{id}")
+    public ResponseEntity<Trip> fetchTripsById(@PathVariable Long id) {
+        var trip = tripService.findById(id);
         return trip != null? ResponseEntity.ok(trip) : ResponseEntity.notFound().build();
     }
 
     @PostMapping(path = "/api/v1/trips")
     public ResponseEntity<Void> createTrip(@Valid @RequestBody TripManipulationRequest request) throws URISyntaxException {
         var trip = tripService.create(request);
-        URI uri = new URI("/api/v1/trips/" + trip.getTid());
+        URI uri = new URI("/api/v1/trips/" + trip.getId());
         return ResponseEntity
                 .created(uri)
                 .header("Access-Control-Expose-Headers", "Location")
                 .build();
     }
 
-    @PutMapping(path = "/api/v1/trips/{tid}")
-    public ResponseEntity<Trip> updateTrip(@PathVariable Long tid, @RequestBody TripManipulationRequest request) {
-        var trip = tripService.update(tid, request);
+    @PutMapping(path = "/api/v1/trips/{id}")
+    public ResponseEntity<Trip> updateTrip(@PathVariable Long id, @RequestBody TripManipulationRequest request) {
+        var trip = tripService.update(id, request);
         return trip != null? ResponseEntity.ok(trip) : ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping(path = "/api/v1/trips/{tid}")
-    public ResponseEntity<Void> deleteTrip(@PathVariable Long tid) {
-        boolean successful = tripService.deleteById(tid);
+    @DeleteMapping(path = "/api/v1/trips/{id}")
+    public ResponseEntity<Void> deleteTrip(@PathVariable Long id) {
+        boolean successful = tripService.deleteById(id);
         return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 }

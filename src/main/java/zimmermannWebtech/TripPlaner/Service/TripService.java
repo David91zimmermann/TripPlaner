@@ -27,8 +27,8 @@ public class TripService {
                 .collect(Collectors.toList());
     }
 
-    public Trip findById(Long tid) {
-        var tripEntity = tripRepo.findById(tid);
+    public Trip findById(Long id) {
+        var tripEntity = tripRepo.findById(id);
         return tripEntity.map(tripTransformer::transformEntity).orElse(null);
     }
 
@@ -38,8 +38,8 @@ public class TripService {
         return tripTransformer.transformEntity(tripEntity);
     }
 
-    public Trip update(Long tid, TripManipulationRequest request) {
-        var tripEntityOptional = tripRepo.findById(tid);
+    public Trip update(Long id, TripManipulationRequest request) {
+        var tripEntityOptional = tripRepo.findById(id);
         if (tripEntityOptional.isEmpty()) {
             return null;
         }
@@ -54,12 +54,12 @@ public class TripService {
         return tripTransformer.transformEntity(tripEntity);
     }
 
-    public boolean deleteById(Long tid) {
-        if (!tripRepo.existsById(tid)) {
+    public boolean deleteById(Long id) {
+        if (!tripRepo.existsById(id)) {
             return false;
         }
 
-        tripRepo.deleteById(tid);
+        tripRepo.deleteById(id);
         return true;
     }
 }

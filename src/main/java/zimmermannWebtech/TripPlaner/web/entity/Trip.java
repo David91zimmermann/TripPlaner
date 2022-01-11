@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Trip {
 
-    private long tid;
+    private long id;
     private String urlaubsname;
     private String reiseort;
     private String reisestart;
@@ -13,8 +13,8 @@ public class Trip {
     private List<String> begleiter;
     private List<String> anfragende;
 
-    public Trip(long tid, String urlaubsname, String reiseort, String reisestart, String reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
-        this.tid = tid;
+    public Trip(long id, String urlaubsname, String reiseort, String reisestart, String reiseende, String ersteller, List<String> begleiter, List<String> anfragende) {
+        this.id = id;
         this.urlaubsname = urlaubsname;
         this.reiseort = reiseort;
         this.reisestart = reisestart;
@@ -24,12 +24,12 @@ public class Trip {
         this.anfragende = anfragende;
     }
 
-    public long getTid() {
-        return tid;
+    public long getId() {
+        return id;
     }
 
-    public void setTid(long tid) {
-        this.tid = tid;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getUrlaubsname() {

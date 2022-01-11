@@ -9,8 +9,8 @@ public class TripEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tid")
-    private Long tid;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "urlaubsname", nullable = false)
     private String urlaubsname;
@@ -47,12 +47,12 @@ public class TripEntity {
         this.anfragende = anfragende;
     }
 
-    public Long getTid() {
-        return tid;
+    public Long getId() {
+        return id;
     }
 
-    public void setTid(Long tid) {
-        this.tid = tid;
+    public void setId(Long tid) {
+        this.id = id;
     }
 
     public String getUrlaubsname() {
