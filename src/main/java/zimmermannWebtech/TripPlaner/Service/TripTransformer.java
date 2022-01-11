@@ -12,9 +12,6 @@ public class TripTransformer {
                 tripEntity.getUrlaubsname(),
                 tripEntity.getReiseort(),
                 tripEntity.getTripbegin(),
-                tripEntity.getTripend(),
-                tripEntity.getErsteller(),
-                tripEntity.getBegleiter(),
-                tripEntity.getAnfragende());
+                tripEntity.getTripend());
     }
 }

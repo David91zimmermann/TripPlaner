@@ -24,35 +24,17 @@ public class TripEntity {
     @Column(name = "tripend", nullable = false)
     private String tripend;
 
-    @Column(name = "ersteller")
-    private String ersteller;
-
-    @ElementCollection
-    @Column(name = "begleiter")
-    private List<String> begleiter;
-
-    @ElementCollection
-    @Column(name = "anfragende")
-    private List<String> anfragende;
-
     protected TripEntity() {}
 
-    public TripEntity(String urlaubsname, String reiseort, String tripbegin, String tripend, String ersteller, List<String> begleiter, List<String> anfragende) {
+    public TripEntity(String urlaubsname, String reiseort, String tripbegin, String tripend) {
         this.urlaubsname = urlaubsname;
         this.reiseort = reiseort;
         this.tripbegin = tripbegin;
         this.tripend = tripend;
-        this.ersteller = ersteller;
-        this.begleiter = begleiter;
-        this.anfragende = anfragende;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long tid) {
-        this.id = id;
     }
 
     public String getUrlaubsname() {
@@ -85,29 +67,5 @@ public class TripEntity {
 
     public void setTripend(String tripend) {
         this.tripend = tripend;
-    }
-
-    public String getErsteller() {
-        return ersteller;
-    }
-
-    public void setErsteller(String ersteller) {
-        this.ersteller = ersteller;
-    }
-
-    public List<String> getBegleiter() {
-        return begleiter;
-    }
-
-    public void setBegleiter(List<String> begleiter) {
-        this.begleiter = begleiter;
-    }
-
-    public List<String> getAnfragende() {
-        return anfragende;
-    }
-
-    public void setAnfragende(List<String> anfragende) {
-        this.anfragende = anfragende;
     }
 }
